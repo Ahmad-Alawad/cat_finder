@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>All cats</title>
+{% endblock %}
+
+{% block body %}
+    
+    <div class="container-fluid">
+        {% for cat in cats_list %}
+            <div class="row">
+                    <div class="col-lg-6"><img src="{{ cat.img_url }}" ></div>
+                    <div class="col-lg-6"><h3 > {{ cat.name }} </h3> </div>
+            </div>      
+        {% endfor %}
+
+    </div>
+        
+
+{% endblock %}
